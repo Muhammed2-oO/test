@@ -1,1 +1,52 @@
+import java.util.Scanner;
 
+public class Java {
+  public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    // out put : { Enter your mark (0-100): 77 , Mark = 77 , Adjusted mark = 80.85
+    // Grade is B}
+
+    System.out.print("Enter your mark (0-100): ");
+    int mark = scan.nextInt();
+    double adjustedMark = (mark + (mark * 0.05));
+    scan.nextLine();
+    String massage;
+    if (mark >= 0 && mark <= 100) {
+      System.out.println("Mark = " + mark);
+      if (mark >= 95) {
+        System.out.println("Adjusted mark = 100\nGrade = A");
+        return;
+      }
+      if (mark >= 86 && mark < 95) {
+        System.out.println("Adjusted mark = " + adjustedMark + "\nGrade = A");
+        return;
+      }
+      if (mark > 76 && mark < 86) {
+        System.out.println("Adjusted mark = " + adjustedMark + "\nGrade = B");
+        return;
+      }
+      if (mark == 76) {
+        System.out.println("Adjusted mark = 80\nGrade = B");
+        return;
+      }
+      if (mark >= 67 && mark < 76) {
+        System.out.println("Adjusted mark = " + adjustedMark + "\nGrade = C");
+        return;
+      }
+      if (mark > 57 && mark < 67) {
+        System.out.println("Adjusted mark = " + adjustedMark + "\nGrade = D");
+        return;
+      } else if (mark == 57) {
+        System.out.println("Adjusted mark = 60\nGrade = D");
+      } else {
+        System.out.println("Adjusted mark = " + adjustedMark + "\nGrade = F");
+      }
+      massage = "";
+    } else {
+      massage = " Error! , you are not allowed to input less than 0 & more than 100!";
+    }
+    System.out.println(massage);
+    scan.close();
+
+  }
+}
