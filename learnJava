@@ -3,6 +3,149 @@ import java.util.Scanner;
 public class Java {
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
+           
+        // print statement
+        System.out.println("Hello , world!");
+        System.out.print("Hello , world!");
+        System.out.print(" \n Hello , world!");
+        System.out.print(" \t Hello , world!");
+        System.out.println(" \n Hello , world!");
+        System.out.println("\\Hello , \\world!");
+        System.out.println("\"Hello , world!\"");
+
+        // Variables type : 1-primitive 2-non primitive
+        // 1-Primitive : 1-Integer 2-Pointing number 3-Boolean 4-Character
+
+        // 1-Integer : byte < short < int < long
+        byte by = 32;
+        short sh = -647;
+        int in = 76725;
+
+        long lo = -74618671; // without l & L
+        long lo1 = 74618671l; // with l
+        long lo2 = +74618671L; // with L
+
+        System.out.println(by);
+        System.out.println(sh);
+        System.out.println(in);
+        System.out.println(lo);
+        System.out.println(lo1);
+        System.out.println(lo2);
+
+        // 2-Pointing number : float < double
+        float fl = 136.45f; // with f
+        float fl1 = 136.45F; // with F
+        float fl2 = 100f; // no point number
+        float fl3 = 100; // no point number & with out f or F ??
+
+        double dou = 752.645;
+        double dou1 = -752.645d; // with d
+        double dou2 = 752.645D; // with D
+        double dou3 = 752; // no point number
+
+        System.out.println(fl);
+        System.out.println(fl1);
+        System.out.println(fl2);
+        System.out.println(fl3);
+        System.out.println(dou);
+        System.out.println(dou1);
+        System.out.println(dou2);
+        System.out.println(dou3);
+
+        // 3-Boolean : boolean (true or false)
+        boolean boo = true;
+        boolean boo1 = false;
+        boolean boo2 = !true;   // with (!) ?
+        boolean boo3;           // error ? if you want to print it
+
+        System.out.println(boo);
+        System.out.println(!boo1); // with (!) ?
+        System.out.println(boo2);
+        System.out.println("______");
+
+        // 4-Character : char ('single character')
+        char ch = 'A'; // '' inside the single quotation could be every thing ,and it could be space ' '.
+        char ch1 = ' ';
+        char ch2 = '~';
+
+        System.out.println(ch);
+        System.out.println(ch1);
+        System.out.println(ch2);
+
+        // some e.g.
+        byte num1, num2, num3 = 100;
+
+        short number = 35, number1 = 12, number2 = 73;
+
+        /* int i1 = scan.nextInt(), i2 = scan.nextInt(), i3 = scan.nextInt(); */
+
+        long l1, l2, l3;
+        l1 = l2 = l3 = 50;
+
+        boolean b1 = !true, b2 = !(!false), b3 = !!!!true;
+
+        char currency = '~', currency1 = '$', currency2 = '2';
+
+        System.out.println(b1 + " " + b2 + " " + b3);
+
+        // 2-Non primitive : String ,etc...
+        String name = "Hi";
+        String name2 = " char x = \'A\'; ";
+
+        System.out.println("name");
+        System.out.println(name);
+        System.out.println(name2);
+
+        // some e.g.
+        String na1, na2, na3 = "Person";
+
+        /* String st1=scan.nextLine(),st2 = scan.nextLine(); */
+
+        String name1 = "\n \n \n \" Slaw \"";
+
+        // Type casting : 1-Widening 2-Narrowing
+        // 1-Widening : byte --> short --> int --> long --> float --> double
+        byte b = 111;
+        short s = b;
+        int i = s;
+        long l = i;
+        float f = l; // float f = l f; or float f = l F; ??
+        double d = f;
+
+        System.out.println(d);
+        // some e.g. {char} --> int --> long --> float --> double
+        char myChar = 'A';
+
+        int myInt = myChar;
+
+        double myDouble = myChar;
+
+        System.out.print(myChar + "   ");
+        System.out.print(myInt + "   ");
+        System.out.println(myDouble);
+
+        // 2- Narrowing : double --> float --> long --> int --> short --> byte
+        double DOU = 112987635.9805387176363;
+        float FLO = (float) DOU;
+        long LON = (long) FLO;
+        int INT = (int) LON;
+        short SHO = (short) INT;
+        byte BYT = (byte) SHO;
+
+        System.out.println();
+
+        // some e.g.
+        char $ch = '@';
+        byte $by = (byte) $ch;
+
+        double y = 99.987654;
+        int x = (int) y;
+
+        System.out.println($by);
+        System.out.println("X = point ?  "+(double) x);     // *Be careful*
+
+/*********************************************************************************************************/
+
     // out put : { Enter your mark (0-100): 77 , Mark = 77 , Adjusted mark = 80.85
     // Grade is B}
 
